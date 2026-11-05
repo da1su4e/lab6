@@ -3,6 +3,52 @@ body {
     background-color: #F1EEE6;
 }
 
+
+/* Базові налаштування адаптивності */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+.wrap {
+    width: 100%;
+    overflow: clip;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__wordmark {
+    text-decoration: none;
+}
+
+.lab__content {
+    align-items: stretch;
+}
+
+.hero__text {
+    min-width: 0;
+}
+
+.hero-photo {
+    flex: 0 0 50%;
+    max-width: none;
+}
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1051,5 +1097,588 @@ body {
     .footer__right {
         align-items: flex-start;
         gap: 16px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .header__content {
+        padding: 22px 24px;
+        gap: 20px;
+    }
+
+    .nav ul {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .home-link {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+    /* Головна секція */
+
+    .hero__text {
+        height: 600px;
+        padding: 32px;
+    }
+
+    .hero-photo {
+        height: 600px;
+    }
+
+    .lab-title {
+        font-size: clamp(65px, 9vw, 100px);
+        line-height: 0.92;
+    }
+
+    .lab-lead {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .lab-hero-ctas {
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .btn-dark {
+        padding: 14px 18px;
+    }
+
+    /* Фотографія */
+
+    .hero-photo__image {
+        width: 68%;
+        height: 66%;
+        top: 16%;
+        left: 23%;
+    }
+
+    .hero-photo__sticker {
+        top: 48%;
+        left: 3%;
+    }
+
+    .hero-photo__caption {
+        right: 15px;
+        bottom: 65px;
+    }
+
+    /* Картки */
+
+    .pages__title {
+        font-size: 54px;
+    }
+
+    .page-card__title {
+        font-size: 40px;
+    }
+
+    /* Темна секція */
+
+    .context__info {
+        padding: 40px;
+    }
+
+    .context__title {
+        font-size: 60px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Header */
+
+    .header__content {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .header__wordmark {
+        flex: 1;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+    }
+
+    .nav ul {
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .home-link {
+        padding: 10px 14px;
+    }
+
+    /* Hero */
+
+    .lab__content {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .hero__text {
+        width: 100%;
+        height: auto;
+        min-height: 580px;
+        padding: 40px 30px;
+    }
+
+    .eyebrow {
+        margin-bottom: 38px;
+    }
+
+    .lab-title {
+        font-size: clamp(72px, 12vw, 105px);
+        line-height: 0.92;
+        margin-bottom: 30px;
+    }
+
+    .lab-lead {
+        max-width: 520px;
+    }
+
+    .lab-hero-ctas {
+        margin-top: 40px;
+    }
+
+    /* Фотоблок */
+
+    .hero-photo {
+        flex: none;
+        width: 100%;
+        max-width: none;
+        height: 600px;
+        border-left: none;
+        border-top: 1.5px solid #171715;
+    }
+
+    .hero-photo__image {
+        top: 12%;
+        left: 23%;
+        width: 60%;
+        height: 72%;
+    }
+
+    .hero-photo__sticker {
+        top: 46%;
+        left: 8%;
+    }
+
+    .hero-photo__symbol {
+        font-size: 75px;
+    }
+
+    /* Інформація */
+
+    .info__content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .info__content > div {
+        border-bottom: 1.5px solid #171715;
+    }
+
+    .info__content > div:nth-child(2) {
+        border-right: none;
+    }
+
+    .info__content > div:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+
+    /* Сторінки */
+
+    .pages__content {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    .pages__top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pages__title {
+        font-size: 62px;
+    }
+
+    .pages__intro {
+        max-width: 500px;
+        margin: 0;
+    }
+
+    .pages__cards {
+        flex-direction: column;
+    }
+
+    .page-card__title {
+        font-size: 48px;
+    }
+
+    .student-card__image {
+        height: 340px;
+    }
+
+    .history-card__poster {
+        min-height: 300px;
+    }
+
+    /* Контекст */
+
+    .context__content {
+        flex-direction: column;
+    }
+
+    .context__photo {
+        flex: none;
+        width: 100%;
+        height: 500px;
+        min-height: 0;
+    }
+
+    .context__info {
+        padding: 60px 35px;
+    }
+
+    .context__title {
+        font-size: 70px;
+    }
+
+    /* Публікація */
+
+    .publishing__content {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .publishing__title {
+        font-size: 58px;
+    }
+
+    .publishing__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .publishing__card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    /* Футер */
+
+    .footer__content {
+        padding: 30px 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Header */
+
+    .header__content {
+        padding: 18px 16px;
+        gap: 18px;
+    }
+
+    .wordmark-icon {
+        font-size: 36px;
+    }
+
+    .wordmark-sub {
+        font-size: 8px;
+        padding-left: 10px;
+    }
+
+    .header__wordmark {
+        gap: 10px;
+    }
+
+    .home-link {
+        font-size: 9px;
+        padding: 9px;
+    }
+
+    .nav ul {
+        gap: 8px;
+    }
+
+    .nav-link {
+        font-size: 9px;
+    }
+
+    /* Головний екран */
+
+    .hero__text {
+        min-height: 0;
+        padding: 35px 22px 45px;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 0.7px;
+        margin-bottom: 35px;
+    }
+
+    .lab-edition {
+        font-size: 9px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .lab-title {
+        font-size: clamp(64px, 17vw, 88px);
+        line-height: 0.9;
+        margin-bottom: 28px;
+    }
+
+    .lab-lead {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .lab-hero-ctas {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-top: 0;
+    }
+
+    .btn-dark {
+        padding: 16px 20px;
+    }
+
+    /* Фотографія */
+
+    .hero-photo {
+        height: 490px;
+    }
+
+    .hero-photo__info {
+        top: 20px;
+        left: 18px;
+        font-size: 9px;
+    }
+
+    .hero-photo__image {
+        top: 85px;
+        left: 21%;
+        width: 69%;
+        height: 320px;
+        box-shadow: 8px 8px 0 #171715;
+    }
+
+    .hero-photo__sticker {
+        top: 220px;
+        left: 8px;
+        padding: 10px;
+        font-size: 9px;
+    }
+
+    .hero-photo__symbol {
+        bottom: 15px;
+        left: 15px;
+        font-size: 55px;
+    }
+
+    .hero-photo__caption {
+        right: 12px;
+        bottom: 50px;
+        padding: 10px;
+        font-size: 9px;
+        box-shadow: 3px 3px 0 #171715;
+    }
+
+    .hero-photo__disclaimer {
+        right: 12px;
+        bottom: 15px;
+        font-size: 9px;
+    }
+
+    /* Інформація */
+
+    .info__content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .info__content > div {
+        padding: 18px 12px;
+        min-width: 0;
+    }
+
+    .info__title {
+        font-size: 9px;
+    }
+
+    .info__text {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Сторінки */
+
+    .pages__content {
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+
+    .pages__title {
+        font-size: clamp(42px, 12vw, 58px);
+    }
+
+    .pages__intro {
+        font-size: 14px;
+    }
+
+    .pages__cards {
+        gap: 16px;
+    }
+
+    .page-card__head {
+        padding: 12px;
+    }
+
+    .page-card__label {
+        font-size: 10px;
+    }
+
+    .page-card__body {
+        padding: 22px 16px;
+    }
+
+    .page-card__title {
+        font-size: clamp(34px, 10vw, 46px);
+    }
+
+    .page-card__text {
+        font-size: 14px;
+    }
+
+    .student-card__image {
+        height: 220px;
+    }
+
+    .history-card__visual {
+        padding: 12px;
+    }
+
+    .history-card__poster {
+        min-height: 230px;
+        padding: 14px;
+    }
+
+    .history-card__number {
+        font-size: 115px;
+    }
+
+    .history-card__keywords {
+        top: 15px;
+        right: 12px;
+    }
+
+    .history-card__keywords span {
+        font-size: 9px;
+    }
+
+    .history-card__meta {
+        right: 16px;
+        bottom: 16px;
+        font-size: 11px;
+    }
+
+    /* Контекст */
+
+    .context__photo {
+        height: 390px;
+    }
+
+    .context__info {
+        padding: 45px 22px;
+    }
+
+    .context__eyebrow {
+        font-size: 10px;
+    }
+
+    .context__title {
+        font-size: clamp(48px, 14vw, 66px);
+        letter-spacing: -1px;
+    }
+
+    .context__description {
+        font-size: 14px;
+    }
+
+    /* Публікація */
+
+    .publishing__content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .publishing__title {
+        font-size: clamp(36px, 10vw, 52px);
+        letter-spacing: -1px;
+    }
+
+    .publishing__description {
+        font-size: 14px;
+    }
+
+    .publishing__cards {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .publishing__card {
+        min-height: 170px;
+    }
+
+    .publishing__card:last-child {
+        grid-column: auto;
+    }
+
+    /* Footer */
+
+    .footer__content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+        padding: 30px 20px;
+    }
+
+    .footer__right {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer__logo {
+        font-size: 46px;
+    }
+
+    .footer__credits {
+        font-size: 10px;
     }
 }
